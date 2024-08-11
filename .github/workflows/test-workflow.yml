@@ -1,0 +1,16 @@
+name: Angular application
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: Print a welcome message
+        run: echo 'Hello, welcome to first GitHub action workflow'
+
+      - name: Print current date
+        run: echo "Today's date is $(date)"
+
+      - name: Print current branch name
+        run: echo 'This code is running on the branch ${{ github.ref }}'
